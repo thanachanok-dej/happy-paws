@@ -1,0 +1,23 @@
+services:
+  mariadb:
+    image: mariadb:latest
+
+
+    container_name: happy_paws_db
+
+
+    environment:
+      MARIADB_ROOT_PASSWORD: rootpassword
+      MARIADB_DATABASE: happy_paws
+      MARIADB_USER: happyuser
+      MARIADB_PASSWORD: happypassword
+
+
+    ports:
+      - "3333:3306"
+
+
+    volumes:
+      - happy_paws_data:/var/lib/mysql
+volumes:
+  happy_paws_data:

@@ -1,0 +1,28 @@
+[project]
+name = "happy-paws"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "thanachanok-dej", email = "ppppp.tot@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.141.1",
+    "fastmcp>=4.0.10",
+    "mariadb>=1.1.14",
+    "mcp[cli]>=2.2.0",
+    "nicegui>=3.17.1",
+    "pymysql>=1.2.3",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+happy-paws = "happy_paws:main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = []
